@@ -2,50 +2,20 @@ package fr.polytech.mtp.coviwad_users.models;
 
 import javax.persistence.*;
 
-@Entity(name="users")
+@Entity(name="user_entity")
 @Access(AccessType.FIELD)
 public class User {
 
     @Id
-    @Column(name="id")
     private String id;
-
-    @Column(name="email")
     private String email;
-
-    @Column(name = "email_constraint")
-    private String emailConstraint ;
-
-    @Column(name = "email_verified")
-    private Boolean emailVeried;
-
-    @Column(name="enabled")
-    private Boolean enabled;
-
-    @Column(name = "federation_link")
-    private String federationLink;
-
-    @Column(name="last_name")
-    private String lastName;
-
-    @Column(name="realm_id")
-    private String realmId;
-
-    @Column(name="username")
+    private String email_constraint;
+    private boolean email_verified;
+    private boolean enabled;
+    private String first_name;
+    private String last_name;
+    private String realm_id;
     private String username;
-
-    @Column(name="created_timestamp")
-    private Double createdTimestamp;
-
-    @Column(name="service_account_client_link")
-    private String serviceAccountClientLink;
-
-    @Column(name="not_before")
-    private int notBefore;
-
-    public User() {
-
-    }
 
     public String getId() {
         return id;
@@ -63,52 +33,52 @@ public class User {
         this.email = email;
     }
 
-    public String getEmailConstraint() {
-        return emailConstraint;
+    public String getEmail_constraint() {
+        return email_constraint;
     }
 
-    public void setEmailConstraint(String emailConstraint) {
-        this.emailConstraint = emailConstraint;
+    public void setEmail_constraint(String email_constraint) {
+        this.email_constraint = email_constraint;
     }
 
-    public Boolean getEmailVeried() {
-        return emailVeried;
+    public boolean isEmail_verified() {
+        return email_verified;
     }
 
-    public void setEmailVeried(Boolean emailVeried) {
-        this.emailVeried = emailVeried;
+    public void setEmail_verified(boolean email_verified) {
+        this.email_verified = email_verified;
     }
 
-    public Boolean getEnabled() {
+    public boolean isEnabled() {
         return enabled;
     }
 
-    public void setEnabled(Boolean enabled) {
+    public void setEnabled(boolean enabled) {
         this.enabled = enabled;
     }
 
-    public String getFederationLink() {
-        return federationLink;
+    public String getFirst_name() {
+        return first_name;
     }
 
-    public void setFederationLink(String federationLink) {
-        this.federationLink = federationLink;
+    public void setFirst_name(String first_name) {
+        this.first_name = first_name;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLast_name() {
+        return last_name;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLast_name(String last_name) {
+        this.last_name = last_name;
     }
 
-    public String getRealmId() {
-        return realmId;
+    public String getRealm_id() {
+        return realm_id;
     }
 
-    public void setRealmId(String realmId) {
-        this.realmId = realmId;
+    public void setRealm_id(String realm_id) {
+        this.realm_id = realm_id;
     }
 
     public String getUsername() {
@@ -117,29 +87,5 @@ public class User {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public Double getCreatedTimestamp() {
-        return createdTimestamp;
-    }
-
-    public void setCreatedTimestamp(Double createdTimestamp) {
-        this.createdTimestamp = createdTimestamp;
-    }
-
-    public String getServiceAccountClientLink() {
-        return serviceAccountClientLink;
-    }
-
-    public void setServiceAccountClientLink(String serviceAccountClientLink) {
-        this.serviceAccountClientLink = serviceAccountClientLink;
-    }
-
-    public int getNotBefore() {
-        return notBefore;
-    }
-
-    public void setNotBefore(int notBefore) {
-        this.notBefore = notBefore;
     }
 }
