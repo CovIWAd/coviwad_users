@@ -15,7 +15,3 @@ The table we are interested in is  `user_entity
 
 
 Run `bootRun`  with the environment variables given in the documentation.
-
-
-See [kafka](/kafka).
-Go back to [gateway](/gateway).
